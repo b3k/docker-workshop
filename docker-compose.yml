@@ -1,0 +1,22 @@
+version: "3"
+services:
+  php:
+    image: gamivo/php-simple:latest
+    container_name: php
+    environment:
+      - ENV=dev
+      - MYSQL_PASS=rootpass
+      - MYSQL_USER=root
+      - MYSQL_HOST=mysql
+    ports:
+      - 8888:80
+    volumes:
+      - ./images:/images
+    depends_on:
+      - mysql
+  mysql:
+    image: mariadb:latest
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=test
