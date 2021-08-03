@@ -286,3 +286,20 @@ RUN docker-php-ext-install pdo_mysql
 # domyslnie uruchom proces php -S 0.0.0.0:80 -t ./
 CMD ["php", "-S", "0.0.0.0:80", "-t", "./"]
 ```
+
+---
+
+# Docker network - podstawy
+
+```bash
+docker network create workshop
+docker run --net workshop --name hebel1 -d gamivo/php-simple:latest
+docker run --net workshop --name hebel2 -d gamivo/php-simple:latest
+docker exec -it hebel1 bash
+curl hebel2
+exit
+
+docker exec -it hebel2 bash
+curl hebel1
+exit
+```
