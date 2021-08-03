@@ -22,7 +22,7 @@ info: |
 
 Warsztaty z podstaw oraz praktycznych przypadków uzycia w dewelopmencie GAMIVO.
 
-<img class="absolute -bottom-9 -left-7 w-80 opacity-50"
+<img class="w-200 px-50 opacity-70"
   src="https://assets-cf.gamivo.com/assets/images/g-logo.svg"
 />
 
